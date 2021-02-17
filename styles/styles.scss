@@ -1,6 +1,15 @@
-@import url('fonts/Gobold.otf');
-@import url('fonts/Great-Vibes.ttf');
-@import url('fonts/Vidaloka.ttf');
+@font-face {
+    font-family: gobold;
+    src: url('fonts/Gobold.otf');
+}
+@font-face {
+    font-family: Great Vibes;
+    src: url('fonts/Great-Vibes.ttf');
+}
+@font-face {
+    font-family: vidaloka;
+    src: url('fonts/Vidaloka.ttf');
+}
 
 html{
     box-sizing: border-box;
@@ -19,7 +28,6 @@ body{
 .first-section{
     box-sizing: border-box;
     width: 100%;
-    height: 100vh;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -209,6 +217,7 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 100%;
     margin-bottom: 5vh;
 }
 .catering-image-container img{
@@ -356,6 +365,9 @@ select{
     padding: 2vh 10vw;
     margin: 2vh 0;
 }
+.contact-container, .location-container, .info-hours-container{
+    height: 100%;
+}
 .hours-container{
     margin: 2vh 0;
 }
@@ -388,11 +400,13 @@ select{
     height: 100%;
     border-radius: 5px;
 }
+
 .contact-message-container{
     font-family: 'vidaloka';
     font-size: 1.2em;
     color: rgba(39, 24, 13, 0.836);;
     text-align: center;
+    height: 100%;
 }
 .footer{
     display: flex;
@@ -495,7 +509,6 @@ select{
 }
 .bottom-tab-container{
     grid-column: 1/4;
-    
 }
 
 }
