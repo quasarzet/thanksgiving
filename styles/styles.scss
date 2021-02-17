@@ -17,6 +17,7 @@ html{
     padding: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background: url('/styles/images/background-texture.png');
 }
 body{
     margin: 0;
@@ -96,6 +97,8 @@ body{
     font-size: 2.5em;
     font-family: 'gobold';
     color: white;
+    padding-left: 0;
+    padding-bottom: 10vh;
 }
 .landing-image-container{
     display: flex;
@@ -177,32 +180,36 @@ body{
     font-size: 1.5em;
     text-align: center;
 }
-.menu-container{
+.menu-options-container{
+    width: 100%;
+    height: 50vh;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-}
-.menu-1-container, .menu-2-container{
-    width: 100%;
-    height: 50vh;
     margin-bottom: 5vh;
 }
-.menu-1-container img, .menu-2-container img{
+.menu-options-container img{
     width: 100%;
     height: 100%;
     border-radius: 5px;
 }
-.menu-title{
-    position: relative;
-    top: -65%;
+.menu-options{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menu-option{
     font-family: 'vidaloka';
-    font-size: 2em;
+    font-size: 1.5em;
     color: white;
     text-align: center;
-    background-color: rgba(0,0,0,0.7);
-    padding: 2vw;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 5px;
+    padding: 3vh 5vw;
+    margin: 4vw;
 }
 
 // THIRD SECTION
