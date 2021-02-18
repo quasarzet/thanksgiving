@@ -27,10 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-a:link, a:visited {
-  text-decoration: none;
-}
-
 .first-section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -80,8 +76,8 @@ a:link, a:visited {
 
 .burger-menu {
   z-index: 3;
-  width: 50px;
-  height: 6vh;
+  width: 8vw;
+  height: 8vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,8 +94,8 @@ a:link, a:visited {
 
 .line {
   z-index: 3;
-  width: 100%;
   height: 4px;
+  width: 100%;
   background-color: rgba(105, 55, 19, 0.836);
 }
 
@@ -155,6 +151,11 @@ a:link, a:visited {
   color: white;
   padding-left: 0;
   padding-bottom: 10vh;
+}
+
+.svg-cross {
+  width: 6vh;
+  margin-left: 80vw;
 }
 
 .landing-image-container {
@@ -575,6 +576,7 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   background: url("/styles/images/background-texture.png");
+  padding: 2vh 3vw;
 }
 
 .info-hours-container, .location-container, .contact-container {
@@ -692,16 +694,14 @@ select {
   text-align: center;
 }
 
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: white;
+}
+
 @media all and (min-width: 700px) {
   .logo-container {
     height: 10vh;
-  }
-  .burger-menu {
-    height: 10vh;
-  }
-  .line {
-    width: 70px;
-    height: 6px;
   }
   .landing-image-container {
     height: 70vh;
@@ -717,6 +717,10 @@ select {
   }
   .location-image-container {
     width: 30vw;
+  }
+  a:link, a:visited, a:active {
+    text-decoration: none;
+    color: white;
   }
 }
 
@@ -737,13 +741,6 @@ select {
   }
   .logo-container {
     height: 10vh;
-  }
-  .burger-menu {
-    height: 10vh;
-  }
-  .line {
-    width: 70px;
-    height: 6px;
   }
   .landing-image-container {
     height: 80vh;
@@ -779,6 +776,10 @@ select {
   .subscribe-input {
     width: 40%;
     height: 5vh;
+  }
+  a:link, a:visited, a:active {
+    text-decoration: none;
+    color: white;
   }
 }
 
@@ -1114,4 +1115,4 @@ select {
     width: 15vw;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index-styles.css.map */

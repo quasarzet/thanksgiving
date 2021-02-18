@@ -17,14 +17,13 @@ html{
     padding: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background: url('/styles/images/background-texture.png');
 }
 body{
     margin: 0;
-    padding: 2vh 3vw;
     overflow-x: hidden;
-    background: url('/styles/images/background-texture.png');
+
 }
+
 // FIRST SECTION-----------------------------------------------------------
 .first-section{
     box-sizing: border-box;
@@ -33,6 +32,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url('/styles/images/background-texture.png');
+    padding: 2vh 3vw;
 }
 .header{
     box-sizing: border-box;
@@ -54,8 +55,8 @@ body{
 }
 .burger-menu{
     z-index: 3;
-    width: 50px;
-    height: 6vh;
+    width: 8vw;
+    height: 8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,8 +64,8 @@ body{
 }
 .line{
     z-index: 3;
-    width: 100%;
     height: 4px;
+    width: 100%;
     background-color: rgba(105, 55, 19, 0.836);
 }
 .navigation-container{
@@ -99,6 +100,10 @@ body{
     color: white;
     padding-left: 0;
     padding-bottom: 10vh;
+}
+.svg-cross{
+    width: 6vh;
+    margin-left: 80vw;
 }
 .landing-image-container{
     display: flex;
@@ -162,6 +167,9 @@ body{
 .second-section{
     box-sizing: border-box;
     width: 100%;
+    background: url('/styles/images/background-texture.png');
+    padding: 2vh 3vw;
+
 }
 .second-section-container{
     width: 100%;
@@ -221,6 +229,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url('/styles/images/background-texture.png');
+    padding: 2vh 3vw;
 }
 .catering-image-container{
     display: flex;
@@ -254,6 +264,8 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background: url('/styles/images/background-texture.png');
+    padding: 2vh 3vw;
 }
 .fourth-section-container{
     display: flex;
@@ -318,6 +330,8 @@ select{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background: url('/styles/images/background-texture.png');
+    padding: 2vh 3vw;
 }
 .gift-card-container{
     width: 100%;
@@ -359,7 +373,8 @@ select{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
+    background: url('/styles/images/background-texture.png');
+    padding: 2vh 3vw;
 }
 .info-hours-container, .location-container, .contact-container{
     box-sizing: border-box;
@@ -374,6 +389,9 @@ select{
     align-items: center;
     padding: 2vh 10vw;
     margin: 2vh 0;
+}
+.info-hours-container{
+    margin-top: 5vh;
 }
 .contact-container, .location-container, .info-hours-container{
     height: 100%;
@@ -410,7 +428,6 @@ select{
     height: 100%;
     border-radius: 5px;
 }
-
 .contact-message-container{
     font-family: 'vidaloka';
     font-size: 1.2em;
@@ -423,11 +440,12 @@ select{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: url('/styles/images/background-texture.png');
+    padding-top: 2vh;
 }
 .subscribe-input{
     width: 60vw;
     margin:2vh 0;
-
 }
 .subscribe-button{
     padding: 1vh 2vw;
@@ -442,19 +460,26 @@ select{
     color: rgba(39, 24, 13, 0.836);;
     text-align: center;
 }
+//REMOVE STYLE FROM ALL LINKS
+a:link, a:visited, a:active{
+    text-decoration: none;
+    color: white;
+}
+
 
 // MEDIA QUERY FOR TABLETS
 @media all and (min-width: 700px){
     .logo-container{
         height:10vh;
     }
-    .burger-menu{
-        height: 10vh;
-    }
-    .line{
-        width: 70px;
-        height: 6px;
-    }
+    // .burger-menu{
+    //     width: 50px;
+    //     height: 50px;
+    // }
+    // .line{
+    //     width: 70px;
+    //     height: 6px;
+    // }
     .landing-image-container{
         height: 70vh;
     }
@@ -470,6 +495,11 @@ select{
     .location-image-container{
         width: 30vw;
     }
+    //REMOVE STYLE FROM ALL LINKS
+    a:link, a:visited, a:active{
+    text-decoration: none;
+    color: white;
+}
 }
 
 // MEDIA QUERY LANDSCAPE
@@ -482,13 +512,6 @@ select{
     }
     .logo-container{
         height:10vh;
-    }
-    .burger-menu{
-        height: 10vh;
-    }
-    .line{
-        width: 70px;
-        height: 6px;
     }
     .landing-image-container{
         height: 80vh;
@@ -525,6 +548,11 @@ select{
         width: 40%;
         height: 5vh;
     }
+    //REMOVE STYLE FROM ALL LINKS
+    a:link, a:visited, a:active{
+    text-decoration: none;
+    color: white;
+}
 }
 
 
@@ -532,7 +560,7 @@ select{
 @media all and (min-width: 1025px){
 // FIRST SECTION------------------------------------------------------------------------
 body{
-    padding: 2vh 0;
+    padding: 0 0;
 }
 .first-section{
     box-sizing: border-box;
@@ -542,7 +570,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5vh;
+    padding-top: 2vh;
 }
 .landing{
     box-sizing: border-box;
@@ -612,6 +640,15 @@ body{
 .navigation-bar-items li{
     padding: 0 1.5vw;
     color: #935C3E;
+}
+.navigation-bar-items li:hover{
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
+.navigation-bar-items li:active{
+    transform: scale(0.9);
+    transition-duration: 0.2s;
+    filter:brightness(70%);
 }
 .landing-image-container{
     grid-column-start: 1;
@@ -747,18 +784,20 @@ select{
 .gift-card-button{
     width: 20%;
 }
+.info-hours-container{
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
 .info-containers{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
 }
 .contact-container, .location-container, .info-hours-container{
     height: 60vh;
     width: 25vw;
-    padding:0 3vw;
+    padding: 5vh 3vw;
 }
 .subscribe-input{
     width: 15vw;
