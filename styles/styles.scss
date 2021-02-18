@@ -54,7 +54,7 @@ body{
 }
 .burger-menu{
     z-index: 3;
-    width: 12vw;
+    width: 50px;
     height: 6vh;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@ body{
 .line{
     z-index: 3;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background-color: rgba(105, 55, 19, 0.836);
 }
 .navigation-container{
@@ -83,7 +83,7 @@ body{
     opacity: 0;
 }
 .hide-scrolling{
-    overflow:hidden;
+    overflow: hidden;
     height: 100vw;
     position: fixed;
 }
@@ -116,6 +116,9 @@ body{
 }
 .division-line{
     width: 80vw;
+}
+.small-division-line{
+    display: none;
 }
 .landing-description-container{
     display: flex;
@@ -223,18 +226,18 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     width: 100%;
-    height: 100%;
+    height: 50vh;
     margin-bottom: 5vh;
 }
 .catering-image-container img{
     width: 100%;
-    height: 50vh;
+    height: 100%;
     border-radius: 5px;
 }
 .catering-message{
     position: absolute;
-    margin-top: 30%;
     font-family: 'vidaloka';
     font-size: 1.5em;
     color: white;
@@ -397,7 +400,7 @@ select{
 }
 .location-image-container{
     margin-top: 2vh;
-    width: 60vw;
+    width: 50vw;
     height: 20vh;
     border:rgba(39, 24, 13, 0.836) solid 1px;
     border-radius: 5px;
@@ -440,60 +443,201 @@ select{
     text-align: center;
 }
 
+// MEDIA QUERY FOR TABLETS
+@media all and (min-width: 700px){
+    .logo-container{
+        height:10vh;
+    }
+    .burger-menu{
+        height: 10vh;
+    }
+    .line{
+        width: 70px;
+        height: 6px;
+    }
+    .landing-image-container{
+        height: 70vh;
+    }
+    .menu-options-container{
+        height: 70vh;
+    }
+    .catering-image-container{
+        height: 70vh;
+    }
+    .gift-card-container{
+        height: 50vh;
+    }
+    .location-image-container{
+        width: 30vw;
+    }
+}
+
+// MEDIA QUERY LANDSCAPE
+@media all and (orientation: landscape){
+    .first-section{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-container{
+        height:10vh;
+    }
+    .burger-menu{
+        height: 10vh;
+    }
+    .line{
+        width: 70px;
+        height: 6px;
+    }
+    .landing-image-container{
+        height: 80vh;
+        margin-bottom: 10vh;
+    }
+    .landing-description-container{
+        margin-bottom: 10vh;
+    }
+    .menu-options-container{
+        height: 70vh;
+    }
+    .catering-image-container{
+        height: 70vh;
+    }
+    .input-name, .input-phone, .input-guests{
+        width: 45%;
+        height: 6vh;
+        margin: 2vh 0.5vw;
+    }
+    .input-date, .input-time{
+        width: 30%;
+    }
+    .input-phone, .input-guests{
+        margin-bottom: 5vh;
+    }
+    .gift-card-container{
+        height: 60vh;
+        width: 80%;
+    }
+    .location-image-container{
+        width: 15vw;
+    }
+    .subscribe-input{
+        width: 40%;
+        height: 5vh;
+    }
+}
+
 
 // MEDIA QUERY FOR DESKTOPS
 @media all and (min-width: 1025px){
-
 // FIRST SECTION------------------------------------------------------------------------
+body{
+    padding: 2vh 0;
+}
 .first-section{
-    width: 100vw;
-    height: 100vh;
     box-sizing: border-box;
+    width: 100%;
+    height: 110vh;
     margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
 }
 .landing{
-    width: 100%;
-    height: 100%;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 1fr 6fr;
+    height: 100%;
+    width: 100%;
 }
 .header{
     grid-column: 1/4;
-    background-color: burlywood;
     display: inline-flex;
+    width: 100%;
+    height: 10vh;
 }
 .logo-container{
     grid-column: 1/2;
     grid-row: 1/2;
     width: 15vw;
     height: 10vh;
-    background-color: cornflowerblue;
 }
 .logo-container img{
     width: 100%;
     height: 100%;
 }
+.burger-menu{
+    display: none;
+}
 .navigation-bar{
+    position: relative;
     grid-column: 2/4;
     grid-row: 1/2;
     width: 100%;
-    background-color: crimson;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
 }
+.navigation-container{
+    grid-column: 2/4;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: none;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
 .navigation-bar-items{
-    display: inline-flex;
+    grid-column: 2/4;
+    position: relative;
     list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    font-size: 2em;
+    font-family: 'gobold';
+    color:rgba(39, 24, 13, 0.836);
+    padding-bottom: 0;
+}
+.navigation-bar-items li{
+    padding: 0 1.5vw;
+    color: #935C3E;
 }
 .landing-image-container{
-    grid-column: 1/3;
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row: 2/3;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 2vh;
 }
 .landing-image-container img{
     width: 100%;
     height: 100%;
+}
+.division-line{
+    width: 60vw;
+}
+.small-division-line{
+    display: block;
+    width: 20vw;
+}
+.title{
+    font-size: 3em;
 }
 .landing-description-container{
     grid-column: 3/4;
@@ -502,20 +646,121 @@ select{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 2vh;
+    height: 100%;
+    width: 100%;
+    padding: 0 1vw;
 }
-.first-description{
+.first-description, .second-description{
+    font-family: 'Great Vibes';
     text-align: center;
+    font-size: 2em;
+    width: 100%;
+    margin: 0;
 }
 .landing-social-list{
     list-style: none;
-    
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 .landing-social-list li{
-    display: inline-flex;
-    justify-content: space-around;
+    padding:0 2vw;
+}
+.facebook-svg{
+    width: 1.5vw;
+}
+.instagram-svg{
+    width: 3vw;
+}
+.twitter-svg{
+    width: 3vw;
+}
+.bottom-tab-container{
+    display: none;
 }
 .bottom-tab-container{
     grid-column: 1/4;
 }
-
+.menu-options-container{
+    width: 60vw;
+    height: 80vh;
+}
+.menu-option{
+    font-size: 2em;
+}
+.catering-image-container{
+    width: 60vw;
+    height: 80vh;
+}
+.catering-message{
+    width: 40%;
+}
+.reservations-message{
+    width: 40vw;
+}
+form{
+    border:rgba(39, 24, 13, 0.836) solid;
+    width: 60vw;
+    margin-left: 0;
+    margin-bottom: 5vh;
+}
+.input-name{
+    width: 20vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+}
+.date-time-span{
+    width: 30vw;
+    text-align: center;
+}
+.input-date{
+    width: 10vw;
+    margin-right: 1vw;
+    height: 4vh;
+    margin-bottom: 1vh;
+}
+select{
+    width: 20vw;
+    height: 5vh;
+}
+.input-phone{
+    width: 10vw;
+    margin-right: 1vw;
+    height: 5vh;    
+}
+.input-guests{
+    width: 10vw;
+    height: 5vh;    
+}
+.input-phone, .input-guests{
+    margin-bottom: 2vh;
+}
+.gift-card-container{
+    width: 50vw;
+    height: 60vh;
+}
+.gift-card-options{
+    width: 30vw;
+}
+.gift-card-button{
+    width: 20%;
+}
+.info-containers{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.contact-container, .location-container, .info-hours-container{
+    height: 60vh;
+    width: 25vw;
+    padding:0 3vw;
+}
+.subscribe-input{
+    width: 15vw;
+}
 }
